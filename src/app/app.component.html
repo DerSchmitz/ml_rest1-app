@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Everything you write in the textarea will also be the content of the heading below:</p>
+
+<textarea [(ngModel)]="text"></textarea>
+
+<p>The content of the textarea is;</p>
+<h1>{{text}}</h1>
+
+<button (click)="onSubmit()" type="submit">Submit your Text</button>
+
+<button (click)="onGetcriminal()" type="submit">Get Criminal Records</button>
+
+<div *ngIf="arrestNFL">
+  <div><span>id: </span> {{arrestNFL.Category | uppercase}}</div>
+  <div><span>arrestCount: </span> {{arrestNFL.arrest_count}}</div>
+</div>
+
+
+
+<!--
+<h2>All NFL-Arrests</h2>
+<ul class="NFL-Arrests">
+    <li *ngFor="let hero of heroes" >
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+-->
+
+
+
+
+</body>
+</html>
